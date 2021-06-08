@@ -286,9 +286,7 @@ export const services = {
       `${process.env.REACT_APP_PRODUCT_SERVICE_URL}product/GetProducts/${await getBrokerId()}/${categoryId}/${searchText.trim().length > 0 ? searchText.trim() : ' '
       }/${isFixed}/${pageNumber}/${pageSize}/${sort}/${sortOrder}`,
     ),
-  getUser: async (
-
-  ): Promise<ServiceHandlingInterface<UserInterface[]>> =>
+  getUser: async (): Promise<ServiceHandlingInterface<UserInterface[]>> =>
     api.get(
       `${process.env.REACT_APP_LOOKUP_SERVICE_URL}api/User/`,
     ),

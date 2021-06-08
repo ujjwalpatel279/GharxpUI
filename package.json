@@ -14,11 +14,6 @@
     "format": "prettier --write src/*/**/*.{js,ts,tsx,json}",
     "lint": "eslint src/**/*.{js,ts,tsx} --fix"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:unit"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://mvtuk.visualstudio.com/MVT.ProVision.BrokerOnlineUI/_git/MVT.ProVision.BrokerOnlineUI"

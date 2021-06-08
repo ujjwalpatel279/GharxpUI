@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "files.eol": "\n",
   "cSpell.language": "en-GB"
