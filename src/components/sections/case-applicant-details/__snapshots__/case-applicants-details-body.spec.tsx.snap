@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows card details body show client information on card 1`] = `
+<DocumentFragment>
+  <div
+    class="c-card__body"
+  >
+    <div
+      class="s-card-client__detail"
+    >
+      <span
+        class="doc-upload__success"
+      >
+        <svg
+          class="c-icon c-icon--primary__tick"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M14.92 4.768c0 0.223-0.089 0.446-0.25 0.607l-7.679 7.679c-0.161 0.161-0.384 0.25-0.607 0.25s-0.446-0.089-0.607-0.25l-4.446-4.446c-0.161-0.161-0.25-0.384-0.25-0.607s0.089-0.446 0.25-0.607l1.214-1.214c0.161-0.161 0.384-0.25 0.607-0.25s0.446 0.089 0.607 0.25l2.625 2.634 5.857-5.866c0.161-0.161 0.384-0.25 0.607-0.25s0.446 0.089 0.607 0.25l1.214 1.214c0.161 0.161 0.25 0.384 0.25 0.607z"
+          />
+        </svg>
+      </span>
+      <div
+        class="s-card-client__detail__content"
+      >
+        <span>
+          description
+        </span>
+      </div>
+      <a
+        href="https://brokerui-dev.mutualvision.systems/account/Customer/GetDocument/ee6a192e-73d1-4c9a-b2d7-8de883f37fc5/1/1.undefined"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <button
+          class="c-btn c-btn--secondary c-btn--small c-btn--icon-left"
+          type="button"
+        >
+          <svg
+            class="c-icon"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
+          >
+            <path
+              d="M7.429 1v7.313l-2.023-1.686-1.097 1.317 3.977 3.314 3.977-3.314-1.097-1.317-2.023 1.686v-7.313h-1.714zM0 10.143v2.857c0 1.105 0.895 2 2 2h12c1.105 0 2-0.895 2-2v-2.857h-1.714v2.857c0 0.158-0.128 0.286-0.286 0.286h-12c-0.158 0-0.286-0.128-0.286-0.286v-2.857h-1.714z"
+            />
+          </svg>
+          <span>
+            Download
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,71 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: brokerui-uat-1a-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: brokerui-uat-1a
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 70
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: onlineui-uat-1a
+  name: brokerui-uat-1a
+  namespace: broker-uat-1a
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: onlineui-uat-1a
+  strategy:
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: onlineui-uat-1a
+    spec:
+      containers:
+        - envFrom:
+            - configMapRef:
+                name: onlineuiconfigmap-1a
+          image: acrcontainerregistrynonprod.azurecr.io/mvtprovisionbrokeronlineui:Latest
+          imagePullPolicy: Always
+          name: mvtprovisionbrokeronlineui
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              memory: '250Mi'
+              cpu: '150m'
+            limits:
+              memory: '950Mi'
+              cpu: '500m'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: onlineui-uat-1a
+  name: brokerui-svc-uat-1a
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: onlineui-uat-1a
+  type: ClusterIP

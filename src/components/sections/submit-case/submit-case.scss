@@ -1,0 +1,20 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/SUBMIT-CASE
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-submit-case {
+  text-align: center;
+  margin-bottom: spacer(3);
+}
+
+.c-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-submit-button {
+  margin-left: spacer(2);
+}

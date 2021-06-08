@@ -1,0 +1,24 @@
+// ========================================================================
+// COMPONENTS/SHARED/CONTAINER
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-container {
+  @include container;
+
+  &--ctabar {
+    padding-bottom: 78px;
+  }
+
+  &--fullwidth {
+    max-width: 100%;
+  }
+}
+
+.c-container-fullWidth {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 00.5rem;
+}

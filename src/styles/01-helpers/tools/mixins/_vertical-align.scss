@@ -1,0 +1,11 @@
+// ========================================================================
+// HELPERS/TOOLS/MIXINS/HIDDEN-VISUALLY
+// ========================================================================
+
+// Usage
+// @include vertical-align(24px);
+
+@mixin vertical-align($argument) {
+  height: $argument;
+  line-height: $argument;
+}

@@ -1,0 +1,47 @@
+# Deploy to Azure Kubernetes Service
+# Build and push image to Azure Container Registry; Deploy to Azure Kubernetes Service
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+- master
+
+resources:
+- repo: self
+
+variables:
+
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'e370fd59-803c-45bb-a7d8-bacc0dd4ae77'
+  imageRepository: 'mvtprovisionbrokeronlineui'
+  containerRegistry: 'crmvpdev.azurecr.io'
+  dockerfilePath: 'dockerfile'
+  tag: '$(Build.BuildId)'
+  imagePullSecret: 'crmvpdevf2a0-auth'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+  
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: NodeTool@0
+      displayName: 'Use Node version'
+      inputs:
+        versionSpec: 12.x
+    - task: Npm@0
+      displayName: 'npm install'
+      inputs:
+        arguments: '--force'
+    - task: Npm@1
+      displayName: 'Run Tests'
+      inputs:
+        command: custom
+        verbose: false
+        customCommand: 'run test:unit'

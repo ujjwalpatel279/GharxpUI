@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormRadioGroup Component renders the form radio group component 1`] = `
+<div
+  class="l-flex l-flex--wrap"
+>
+  <div>
+    <label
+      class="c-radio-input"
+      for="test"
+    >
+      <input
+        id="test"
+        name="testName"
+        type="radio"
+        value="test"
+      />
+      <span
+        class="c-radio-input__inner"
+      >
+        <span>
+          test
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+`;

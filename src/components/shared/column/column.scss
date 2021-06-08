@@ -1,0 +1,26 @@
+// ========================================================================
+// COMPONENTS/SHARED/SECTION
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__spaced {
+    padding: 0 spacer(3);
+  }
+
+  &__smaller_screens_hidden {
+    @media (max-width: 768px) {
+      display: none;
+    }
+    @include bp(10, max) {
+      // display: none;
+      border: 1px solid green;
+    }
+  }
+}
+

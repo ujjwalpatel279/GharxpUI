@@ -1,0 +1,11 @@
+// ========================================================================
+// TOOLS/FUNCTIONS/GET-FONT-SIZE
+// ========================================================================
+
+// Example usage - see settings/font-sizes for size reference
+// font-size(f1);
+// font-size(f2);
+
+@function font-size($val) {
+  @return get-value($val, $font-sizes);
+}

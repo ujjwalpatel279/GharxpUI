@@ -1,0 +1,147 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER/NAV
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-site-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border-right: 1px solid color(grey4);
+  background-color: color(navy5);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 300ms ease-in;
+
+  &.isActive {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: spacer(2);
+    padding-top: spacer(3);
+    padding-bottom: spacer(3);
+    background-color: white;
+    border-bottom: 1px solid color(grey4);
+
+    h2 {
+      font-size: font-size(2);
+      text-align: center;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    left: spacer(2);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: color-brand(primary-light-2);
+    border-radius: 50%;
+
+    svg {
+      fill: color-brand(primary);
+    }
+  }
+
+  &__item {
+    margin-bottom: spacer(1);
+    border-top: 1px solid color(grey4);
+    border-bottom: 1px solid color(grey4);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: spacer(2) spacer(3);
+    color: color(grey2);
+    background-color: white;
+
+    svg {
+      margin-right: spacer(2);
+    }
+
+    &:hover {
+      color: color(grey1);
+      text-decoration: none;
+
+      svg {
+        fill: color(grey1);
+      }
+    }
+
+    &.isActive {
+      position: relative;
+      color: color(grey1);
+      text-decoration: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: color-brand(primary);
+      }
+
+      svg {
+        fill: color-brand(primary);
+      }
+    }
+  }
+
+  @include bp(10) {
+    max-width: 300px;
+  }
+
+  @include bp(20) {
+    position: static;
+    padding: 0;
+    max-width: none;
+    background: white;
+    border-right: none;
+    transform: translateX(0);
+    opacity: 1;
+
+    &__title {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      margin: 0;
+      border: 0;
+      padding-left: 0;
+      border-bottom: 0;
+    }
+
+    &__link {
+      padding: spacer(2) spacer(4);
+
+      &.isActive::before {
+        top: auto;
+        bottom: -12px;
+        width: 80%;
+        height: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

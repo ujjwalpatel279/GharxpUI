@@ -1,0 +1,36 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CUSTOMER-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-search-add {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    flex: 1;
+
+    &:first-child {
+      margin-bottom: spacer(1);
+    }
+
+    button {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
+  @include bp(10) {
+    flex-direction: row;
+    align-items: center;
+
+    div:first-child {
+      margin-bottom: 0;
+      margin-right: spacer(2);
+    }
+  }
+}

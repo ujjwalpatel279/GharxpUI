@@ -1,0 +1,30 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/QUESTIONSETS/QUESTIONSET
+// ========================================================================
+
+@import '~sassHelpers';
+.c-question-set {
+  &__previous-question,
+  &__next-question {
+    display: none;
+  }
+  &__auto-decline {
+    color: orange;
+  }
+
+  @include bp(20) {
+    &__previous-question,
+    &__next-question {
+      display: block;
+    }
+
+    &__previous,
+    &__next {
+      display: none;
+    }
+
+    .c-cta-bar {
+      left: 300px;
+    }
+  }
+}

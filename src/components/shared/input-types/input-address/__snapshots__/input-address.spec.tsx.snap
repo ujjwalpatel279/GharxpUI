@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputAddress Component renders the form Address component 1`] = `
+<fieldset
+  class="c-input-address"
+>
+  <legend>
+    Address
+  </legend>
+  <div
+    class="c-form-field"
+  >
+    <label
+      class="c-form-field__label"
+      for="postCodeLookup"
+    >
+      Post code
+    </label>
+    <div
+      class="l-flex"
+    >
+      <div>
+        <input
+          aria-invalid="false"
+          class="c-input undefined undefined"
+          id="postCodeLookup"
+          name="postCodeLookup"
+          type="text"
+        />
+      </div>
+      <div>
+        <button
+          class="c-btn c-btn--primary"
+          type="button"
+        >
+          <span>
+            Find
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <button
+    class="c-btn c-btn--bare u-mb-2"
+    type="button"
+  >
+    <span>
+      Enter address manually
+    </span>
+  </button>
+</fieldset>
+`;

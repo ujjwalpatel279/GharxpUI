@@ -1,0 +1,119 @@
+// ========================================================================
+// COMPONENTS/SHARED/BUTTON
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: spacer(10);
+  padding-left: spacer(8);
+  padding-right: spacer(8);
+  justify-content: center;
+  border-radius: $border-radius;
+  transition: all 0.1s ease-in;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  &:focus {
+    outline: 1px dashed color-brand(primary);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+      transform: none;
+    }
+  }
+
+  svg {
+    font-size: 12px;
+  }
+
+  &--primary {
+    color: white;
+    background-color: color-brand(primary);
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &--secondary {
+    color: color-brand(primary);
+    background-color: color-brand(primary-light-2);
+
+    svg {
+      fill: color-brand(primary);
+    }
+  }
+
+  &--outline {
+    color: color-brand(primary);
+    border: 1px solid color(grey3);
+
+    svg {
+      fill: color-brand(primary);
+    }
+  }
+
+  &--navy {
+    background-color: color(navy1);
+    color: white;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &--bare {
+    padding: spacer(2) 0;
+  }
+
+  &--close {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    background: color(grey1);
+    border-radius: 50%;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &--small {
+    height: spacer(8);
+    padding-left: spacer(4);
+    padding-right: spacer(4);
+  }
+
+  &--icon-left svg {
+    margin-right: spacer(2);
+  }
+
+  &--icon-right svg {
+    margin-left: spacer(2);
+  }
+
+  &--text-hidden span {
+    @include hidden-visually;
+  }
+
+  &__larger_screens_hidden {
+    @include bp(10) {
+      display: none;
+    }
+  }
+}

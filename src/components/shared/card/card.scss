@@ -1,0 +1,77 @@
+@import '~sassHelpers';
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 spacer(2);
+  background: white;
+  border-top: 0.3125rem solid color-brand(primary);
+  border-right: 1px solid color(grey4);
+  border-bottom: 1px solid color(grey4);
+  border-left: 1px solid color(grey4);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  button {
+    display: flex;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      display: flex;
+      height: spacer(18);
+      padding: spacer(3) 0;
+      border-bottom: 1px solid color(grey4);
+    }
+    &__avatar {
+      display: flex;
+      flex: 1;
+      align-items: center;
+
+      &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: #fff;
+        background: #fd9859;
+        border-radius: 50%;
+        font-weight: bolder;
+      }
+    }
+    &__applicant {
+      display: flex;
+      flex: 4;
+      flex-direction: column;
+
+      p {
+        font-size: 12px;
+      }
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      padding: spacer(3) 0;
+      color: color(grey2);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: spacer(3) 0;
+    color: color(grey2);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding: spacer(3) 0;
+    color: color(grey2);
+  }
+}

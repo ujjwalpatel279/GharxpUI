@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Component renders the level 1 heading 1`] = `
+<h1
+  class="c-heading c-heading--h1"
+>
+  Heading Level 1
+</h1>
+`;
+
+exports[`Container Component renders the level 2 heading 1`] = `
+<h2
+  class="c-heading c-heading--h2"
+>
+  Heading Level 2
+</h2>
+`;
+
+exports[`Container Component renders the level 3 heading 1`] = `
+<h3
+  class="c-heading c-heading--h3"
+>
+  Heading Level 3
+</h3>
+`;

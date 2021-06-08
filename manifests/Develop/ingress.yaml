@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: dev-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - host: brokerui.compute.dev.mutualvision.tech
+    http:
+      paths:
+      - path: /(.*)
+        backend:
+          serviceName: brokerui-svc-dev
+          servicePort: 80
+      - path: /app/(.*)
+        backend:
+          serviceName: application-dev-svc
+          servicePort: 80
+      - path: /lookup/(.*)
+        backend:
+          serviceName: lookup-dev-svc
+          servicePort: 80
+      - path: /account/(.*)
+        backend:
+          serviceName: accounts-dev-svc
+          servicePort: 80
+      - path: /product/(.*)
+        backend:
+          serviceName: product-svc-dev
+          servicePort: 80
+      - path: /authentication/(.*)
+        backend:
+          serviceName: auth-svc-dev
+          servicePort: 80

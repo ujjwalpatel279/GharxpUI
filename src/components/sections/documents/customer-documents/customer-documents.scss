@@ -1,0 +1,22 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CUSTOMER-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-customer-document-label {
+  display: flex;
+  align-items: initial;
+  flex-direction: column;
+  margin-bottom: spacer(2);
+  margin-top: spacer(2);
+  font-weight: bold;
+}
+
+.main-upload-button-hidden {
+  display: none;
+}
+
+.main-upload-button {
+  display: initial;
+}

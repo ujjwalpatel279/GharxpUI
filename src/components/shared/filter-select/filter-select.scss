@@ -1,0 +1,50 @@
+// ========================================================================
+// COMPONENTS/SHARED/FILTER-SELECT
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-input-select-wrapper {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: spacer(2);
+    top: 50%;
+    width: 0px;
+    height: 0px;
+    transform: translateY(-50%);
+    border-style: solid;
+    border-width: 7px 6.5px 0px;
+    border-color: color-brand(primary) transparent transparent;
+  }
+}
+
+.c-form-select {
+  height: spacer(10);
+  width: 100%;
+  padding-left: spacer(2);
+  padding-right: spacer(6);
+  border: 1px solid color(grey3);
+  border-radius: $border-radius;
+  background-color: white;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.isRequired {
+    border-left: 5px solid color(navy1);
+  }
+
+  &.isInvalid {
+    background-color: color(errorLight);
+    border-color: color(errorDark);
+  }
+
+  &.isFiltered {
+    border-top: 5px solid color(blue);
+  }
+}

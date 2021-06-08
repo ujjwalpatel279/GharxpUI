@@ -1,0 +1,14 @@
+// ========================================================================
+// TOOLS/FUNCTIONS/GET-MAP-VALUE
+// ========================================================================
+
+// Example usage
+// get-value($map, value);
+
+@function get-value($val, $map) {
+  @if not map-has-key($map, $val) {
+    @warn "No value could be retrieved for #{$val}. " + "Make sure it's defined you noob";
+  }
+
+  @return map-get($map, $val);
+}

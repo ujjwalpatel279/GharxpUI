@@ -1,0 +1,138 @@
+{
+  "loanpurchase": [
+    {
+      "id": 340,
+      "value": "House Purchase"
+    },
+    {
+      "id": 341,
+      "value": "Remortgage"
+    },
+    {
+      "id": 635,
+      "value": "Buy to let"
+    },
+    {
+      "id": 1006,
+      "value": "Shared ownership"
+    }
+  ],
+  "gettitle": [
+    {
+      "id": 1,
+      "value": "Mr"
+    },
+    {
+      "id": 2,
+      "value": "Mrs"
+    },
+    {
+      "id": 3,
+      "value": "Miss"
+    },
+    {
+      "id": 4,
+      "value": "Ms"
+    }
+  ],
+  "GetDynamicWorkflow": [
+    {
+      "id": 1,
+      "formType": "application",
+      "stepOrder": 2
+    },
+    {
+      "id": 2,
+      "formType": "dip",
+      "stepOrder": 1
+    },
+    {
+      "id": 3,
+      "formType": "illustration",
+      "stepOrder": 3
+    },
+    {
+      "id": 4,
+      "formType": "submit",
+      "stepOrder": 4
+    }
+  ],
+  "WorkflowCompletionStatus": [
+    {
+      "workflowStepId": 1,
+      "isComplete": false
+    },
+    {
+      "workflowStepId": 2,
+      "isComplete": false
+    },
+    {
+      "workflowStepId": 3,
+      "isComplete": false
+    },
+    {
+      "workflowStepId": 4,
+      "isComplete": false
+    }
+  ],
+  "GetAll": [
+    {
+      "id": 1404,
+      "titleId": 1,
+      "firstName": "John",
+      "surname": "Green",
+      "dateOfBirth": "1999-01-01T00:00:00",
+      "dob": "01/01/1999",
+      "email": null,
+      "town": "Wilmslow",
+      "postcode": "sk91bj",
+      "telephone": "01625 441 000",
+      "mobileNumber": null,
+      "workNumber": null
+    },
+    {
+      "id": 1407,
+      "titleId": 1,
+      "firstName": "John",
+      "surname": "Smith",
+      "dateOfBirth": "1963-07-31T00:00:00",
+      "dob": "31/07/1963",
+      "email": "whatever@mutualvision.co.uk",
+      "town": "Wilmslow",
+      "postcode": "sk91bj",
+      "telephone": "324324",
+      "mobileNumber": null,
+      "workNumber": null
+    }
+  ],
+  "84EBA5D7-FAD1-42EC-B48A-C200CEF8BCAD": [
+    {
+      "id": 1404,
+      "titleId": 1,
+      "firstName": "John",
+      "surname": "Green",
+      "dateOfBirth": "1999-01-01T00:00:00",
+      "dob": "01/01/1999",
+      "email": null,
+      "town": "Wilmslow",
+      "postcode": "sk91bj",
+      "telephone": "01625 441 000",
+      "mobileNumber": null,
+      "workNumber": null
+    },
+    {
+      "id": 1407,
+      "titleId": 1,
+      "firstName": "John",
+      "surname": "Smith",
+      "dateOfBirth": "1963-07-31T00:00:00",
+      "dob": "31/07/1963",
+      "email": "whatever@mutualvision.co.uk",
+      "town": "Wilmslow",
+      "postcode": "sk91bj",
+      "telephone": "324324",
+      "mobileNumber": null,
+      "workNumber": null
+    }
+  ]
+}

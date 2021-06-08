@@ -1,0 +1,46 @@
+// ========================================================================
+// COMPONENTS/SHARED/SECTION
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-section {
+  background: white;
+  border: 1px solid color(grey4);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    height: spacer(25);
+    padding-left: spacer(5);
+    padding-right: spacer(5);
+    padding-top: spacer(5);
+    padding-bottom: spacer(5);
+    border-bottom: 1px solid color(grey4);
+
+    h3 {
+      font-size: font-size(3);
+      margin-bottom: spacer(3);
+    }
+
+    @include bp(20) {
+      align-items: center;
+      flex-direction: row;
+      height: spacer(16);
+
+      h3 {
+        margin: 0;
+      }
+
+      div {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__body {
+    padding: spacer(5);
+  }
+}

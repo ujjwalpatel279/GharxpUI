@@ -1,0 +1,33 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CUSTOMER-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+
+.applicantCount {
+  display: none;
+
+  @include bp(10, max) {
+    display: inline;
+  }
+}
+
+.case-applicants {
+  .modal-main {
+    position: fixed;
+    background: white;
+    width: 70%;
+    height: 70%;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    padding: 1.25rem;
+    overflow: auto;
+  }
+}
+
+.c-non-main {
+  .c-card {
+    border-top-color: color-brand-fade(primary, 0.35);
+  }
+}

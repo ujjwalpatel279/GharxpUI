@@ -1,0 +1,18 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/GRID
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-grid-no-data {
+  &__message {
+    font-weight: normal;
+    color: color(grey3);
+  }
+
+  img {
+    @include bp(20, max) {
+      transform: scale(0.7);
+    }
+  }
+}

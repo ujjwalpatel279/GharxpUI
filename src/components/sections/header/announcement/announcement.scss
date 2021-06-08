@@ -1,0 +1,106 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER/ANNOUNCEMENT
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-announcement {
+  position: relative;
+}
+
+.btn-see-more {
+  font-weight: 600;
+}
+
+.hidden-label {
+  display: none;
+}
+
+.speech-bubble {
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: $border-radius;
+  display: block;
+  margin-top: 15px;
+  position: absolute;
+  box-shadow: $box-shadow;
+  right: 0px;
+  @include bp(20, max) {
+  }
+}
+
+.speech-bubble:after {
+  bottom: 100%;
+  right: 18px;
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 18px;
+  margin-left: -18px;
+}
+
+.speech-bubble:before {
+  content: ' ';
+  position: absolute;
+  transform: rotate(45deg);
+  width: 36px;
+  height: 36px;
+  right: 18px;
+  top: -12px;
+  z-index: -1;
+  box-shadow: -2px -6px 24px 0px rgba(0, 0, 0, 0.41);
+}
+
+.c-announcement-container {
+  background: white;
+  border: 1px solid color(grey4);
+
+  &__header {
+    padding: spacer(4) 12rem spacer(4) 1rem;
+    border-bottom: 1px solid color(grey4);
+
+    @include bp(20, max) {
+      padding: spacer(4) 8rem spacer(4) 1rem;
+    }
+  }
+  &__body {
+    padding: spacer(6) spacer(4) spacer(4) spacer(4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    div {
+      display: inherit;
+      flex-flow: column;
+      flex-grow: 1;
+      justify-content: start;
+      text-align: left;
+      button {
+        justify-content: start !important;
+        color: color-brand(primary);
+      }
+    }
+
+    div:first-child {
+      flex-grow: 2;
+    }
+
+    .c-announcement-date {
+      justify-content: end;
+      text-align: right;
+      padding: 0.25rem 0;
+      small {
+        display: inline;
+        vertical-align: middle;
+        padding: 0.5rem 0;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "/list/getlist": "/$1",
+  "/a/workflow": "/$1",
+  "/Lists/*": "/$1",
+  "/customer/search": "/$6"
+}

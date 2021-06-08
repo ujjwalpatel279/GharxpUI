@@ -1,0 +1,15 @@
+// ========================================================================
+// TOOLS/MIXINS/GRID-WIDTHS
+// ========================================================================
+
+// This will loop through each breakpoint and generate a new class to be added to the markup to show how much that elements spans at what breakpoint
+// Usage
+// @include grid-widths($at + "bp" + $bp)
+
+@mixin grid-widths($namespace: '') {
+  @for $i from 1 through $grid-columns {
+    .l-grid_span-#{$i}#{$namespace} {
+      grid-column: span $i;
+    }
+  }
+}

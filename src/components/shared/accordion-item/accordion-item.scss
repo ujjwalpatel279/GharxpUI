@@ -1,0 +1,80 @@
+// ========================================================================
+// COMPONENTS/SHARED/ACCORDIO-ITEM
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-accordion-item {
+  background-color: white;
+
+  &__btn,
+  &__body {
+    padding: spacer(4);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    span:first-child {
+      margin-right: spacer(3);
+    }
+
+    svg {
+      font-size: 12px;
+    }
+
+    span:last-child {
+      margin-left: auto;
+    }
+  }
+
+  &__header {
+    display: none;
+  }
+
+  &__body {
+    display: none;
+  }
+
+  &.isActive {
+    background-color: transparent;
+
+    .c-accordion-item__btn svg {
+      transform: rotate(180deg);
+    }
+
+    .c-accordion-item__body {
+      display: block;
+    }
+  }
+
+  @include bp(20, max) {
+    border: 1px solid color(grey4);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+
+  @include bp(20) {
+    background-color: transparent;
+
+    &__body {
+      display: block;
+      padding: spacer(4) 0;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: spacer(3);
+      }
+    }
+  }
+}

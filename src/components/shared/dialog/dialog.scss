@@ -1,0 +1,23 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CUSTOMER-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+
+.dialog {
+  .modal-main {
+    position: fixed;
+    background: white;
+    width: 30%;
+    height: auto;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    padding: 1.25rem;
+    overflow: auto;
+  }
+
+  button {
+    margin: spacer(2);
+  }
+}

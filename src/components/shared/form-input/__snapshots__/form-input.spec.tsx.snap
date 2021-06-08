@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component renders the form input component 1`] = `
+<input
+  aria-invalid="false"
+  class="c-form-input"
+  id="firstName"
+  name="firstName"
+  type="text"
+  value=""
+/>
+`;

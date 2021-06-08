@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Completion Container Component renders the completion container 1`] = `
+<section
+  class="c-completion-container"
+>
+  <div
+    class="c-completion-container__body"
+  >
+    <h2
+      class="u-mb-3"
+    >
+      Test heading
+    </h2>
+    <p>
+      Test text
+    </p>
+  </div>
+  <div
+    class="c-completion-container__footer"
+  >
+    <p>
+      I am a child
+    </p>
+  </div>
+</section>
+`;

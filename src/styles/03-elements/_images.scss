@@ -1,0 +1,29 @@
+// ========================================================================
+// ELEMENTS/IMAGES
+// ========================================================================
+
+// max-width - Set for responsive purpose
+// vertical-align - Set to remove the whitespace that appears underneath
+// border-styles - Set to remove and border styles
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  font-style: italic;
+}
+
+// If a `width` and/or `height` attribute have been explicitly defined, let’s
+// not make the image fluid.
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+// If a alt is empty or is missing, display a big red border
+
+img[alt=''],
+img:not([alt]) {
+  border: 5px dashed #c00;
+}

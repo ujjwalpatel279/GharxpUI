@@ -1,0 +1,128 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/GRID
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-overflow {
+  overflow: auto;
+  padding-bottom: 5px;
+}
+
+.c-grid {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  overflow-x: auto;
+
+  th {
+    font-weight: normal;
+    color: color(grey2);
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      svg {
+        margin-left: spacer(1);
+        fill: color-brand(primary);
+      }
+    }
+  }
+
+  th,
+  td {
+    min-width: 110px;
+    padding: spacer(2);
+    border-bottom: 1px solid color(grey4);
+    padding-left: spacer(3);
+  }
+  tbody {
+    tr {
+      &.active {
+        background-color: color-brand(primary-light-2);
+      }
+    }
+    // tr:has([class='active']) td:first-child
+    tr:not([class]) td:first-child,
+    tr.active td:first-child {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 1px;
+        bottom: 0;
+        width: 3px;
+        background-color: color-brand(secondary);
+      }
+    }
+  }
+  tfoot td {
+    border-bottom: 0;
+  }
+
+  &__pagination {
+    display: inline-flex;
+    background: color(grey1);
+    border: 1px solid color(grey2);
+    border-radius: $border-radius;
+    width: auto;
+    overflow: hidden;
+
+    li:not(:last-child) {
+      border-right: 1px solid color(grey2);
+    }
+
+    button {
+      padding: spacer(1) spacer(2);
+
+      span {
+        @include hidden-visually;
+      }
+
+      svg {
+        font-size: 12px;
+      }
+
+      &:hover {
+        background: white;
+      }
+    }
+
+    &-count {
+      background: var(--primary-light);
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-left: spacer(1);
+      padding-right: spacer(1);
+      color: color(grey2);
+
+      span {
+        display: inline-block;
+        padding-left: spacer(1);
+        padding-right: spacer(1);
+
+        &:first-child {
+          font-weight: bold;
+        }
+
+        &:nth-child(2) {
+          font-size: font-size(1);
+        }
+      }
+    }
+
+    @include bp(20, max) {
+      position: sticky;
+      left: 0;
+    }
+  }
+}

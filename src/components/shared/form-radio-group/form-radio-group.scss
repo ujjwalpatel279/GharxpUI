@@ -1,0 +1,40 @@
+// ========================================================================
+// COMPONENTS/SHARED/FORMS/RADIO-GROUP
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-radio-input {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: spacer(10);
+    padding-left: spacer(3);
+    padding-right: spacer(3);
+    background-color: white;
+    border: 1px solid color-brand(secondary);
+    border-radius: $border-radius;
+  }
+
+  input {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+
+    &:focus ~ .c-radio-input__inner {
+      outline: 1px dashed color-brand(secondary);
+      outline-offset: -4px;
+    }
+
+    &:checked ~ .c-radio-input__inner {
+      background-color: color-brand(secondary);
+      color: white;
+    }
+  }
+}

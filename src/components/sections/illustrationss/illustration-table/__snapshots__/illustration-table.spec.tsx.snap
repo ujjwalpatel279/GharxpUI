@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Illustration Component renders the illustration component 1`] = `
+<div>
+  <div
+    class="c-overflow"
+  >
+    <table
+      class="c-grid"
+    >
+      <thead>
+        <tr>
+          <th
+            colspan="1"
+            hidden=""
+          >
+            <button>
+              Product
+            </button>
+          </th>
+          <th
+            colspan="1"
+            hidden=""
+          >
+            <button>
+              Product Term
+            </button>
+          </th>
+          <th
+            colspan="1"
+            hidden=""
+          >
+            Product Type
+          </th>
+          <th
+            colspan="1"
+            hidden=""
+          >
+            <button>
+              Subsequent Rate
+            </button>
+          </th>
+          <th
+            colspan="1"
+            hidden=""
+          >
+            <button>
+              LTV
+            </button>
+          </th>
+          <th
+            colspan="1"
+            hidden=""
+          />
+          <th
+            colspan="1"
+            hidden=""
+          />
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="c-grid__no-data"
+        >
+          <td
+            colspan="7"
+          >
+            <div
+              class="c-grid-no-data"
+            >
+              <img
+                alt="no-data"
+                class="c-grid-no-data__image"
+                src="[object Object]"
+              />
+              <div
+                class="c-grid-no-data__message"
+              >
+                You currently have no illustrations
+                 
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

@@ -1,0 +1,29 @@
+// ========================================================================
+// COMPONENTS/SHARED/INPUT-TYPES/CURRENCY
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-input-currency {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: spacer(2);
+    padding-right: spacer(2);
+    border-right: 1px solid color(grey3);
+  }
+
+  &.isRequired .c-input-currency__icon {
+    padding-left: spacer(3);
+  }
+
+  input {
+    padding-left: spacer(10);
+  }
+}

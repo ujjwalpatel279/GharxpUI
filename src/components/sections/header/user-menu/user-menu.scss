@@ -1,0 +1,122 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER/USER-MENU
+// ========================================================================
+
+@import '~sassHelpers';
+
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER/NAV
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-user-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  border-left: 1px solid color(grey4);
+  background-color: color(navy5);
+  transform: translateX(100%);
+  opacity: 1;
+  transition: all 300ms ease-in;
+
+  &.isActive {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__title {
+    position: relative;
+    padding-top: spacer(3);
+    padding-bottom: spacer(3);
+    background-color: white;
+    border-bottom: 1px solid color(grey4);
+
+    h2 {
+      font-size: font-size(2);
+      text-align: center;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: spacer(2);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: color-brand(primary-light-2);
+    border-radius: 50%;
+
+    svg {
+      fill: color-brand(primary);
+    }
+  }
+
+  &__name {
+    margin-bottom: spacer(2);
+    padding: spacer(2);
+    color: color(grey2);
+    background: white;
+    border-bottom: 1px solid color(grey4);
+  }
+
+  &__item {
+    margin-bottom: spacer(1);
+    border-top: 1px solid color(grey4);
+    border-bottom: 1px solid color(grey4);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: spacer(2) spacer(3);
+    color: color(grey2);
+    background-color: white;
+
+    svg {
+      margin-right: spacer(2);
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: color(grey4);
+    }
+
+    &.isActive {
+      position: relative;
+      color: color(grey1);
+      text-decoration: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: color-brand(primary);
+      }
+
+      svg {
+        fill: color-brand(primary);
+      }
+    }
+  }
+
+  &__logout {
+    width: 100%;
+    background: white;
+  }
+
+  @include bp(10) {
+    max-width: 300px;
+  }
+}

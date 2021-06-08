@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: uat-minus1a-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: brokerui.compute.uat.mutualvision.tech
+      http:
+        paths:
+          - path: /-1a/(.*)
+            backend:
+              serviceName: brokerui-svc-uat-minus1a
+              servicePort: 80
+          - path: /-1a/app/(.*)
+            backend:
+              serviceName: application-svc-uat-minus1a
+              servicePort: 80
+          - path: /-1a/lookup/(.*)
+            backend:
+              serviceName: lookup-svc-uat-minus1a
+              servicePort: 80
+          - path: /-1a/account/(.*)
+            backend:
+              serviceName: accounts-svc-uat-minus1a
+              servicePort: 80
+          - path: /-1a/product/(.*)
+            backend:
+              serviceName: product-svc-uat-minus1a
+              servicePort: 80
+          - path: /-1a/authentication/(.*)
+            backend:
+              serviceName: auth-svc-uat-minus1a
+              servicePort: 80

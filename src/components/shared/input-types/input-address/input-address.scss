@@ -1,0 +1,16 @@
+// ========================================================================
+// COMPONENTS/SHARED/FORM-ADDRESS
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-input-address {
+  margin: spacer(6) 0;
+  padding: spacer(4) 0;
+  border-top: 1px solid color(grey3);
+  border-bottom: 1px solid color(grey3);
+
+  #post-code {
+    width: 50%;
+  }
+}

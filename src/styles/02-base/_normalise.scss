@@ -1,0 +1,54 @@
+// ========================================================================
+// BASE/NORMALISE
+// ========================================================================
+
+ol,
+ul {
+  list-style: none;
+}
+
+small {
+  font-size: 80%;
+  line-height: normal;
+}
+
+strong {
+  font-weight: bold;
+}
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  color: inherit;
+  @include hidden-visually;
+}
+
+label {
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+// Set display to block for IE
+main {
+  display: block;
+}

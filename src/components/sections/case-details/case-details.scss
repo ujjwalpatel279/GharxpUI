@@ -1,0 +1,58 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CASE-DETAILS
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-case-details {
+  .c-overflow {
+    padding: spacer(5);
+  }
+  &__header-title {
+    text-align: left;
+    color: $col-text;
+    padding-top: spacer(4);
+    margin-left: -#{spacer(2)};
+  }
+  thead {
+    tr > th {
+      margin: 0 -1em;
+      border-bottom: 1px solid color(grey4);
+    }
+  }
+  tbody {
+    tr {
+      td:first-child {
+        text-align: start;
+        padding-left: spacer(5);
+        margin-left: spacer(5);
+      }
+      td:last-child {
+        text-align: end;
+        padding-right: spacer(5);
+      }
+    }
+  }
+}
+
+.c-case-details__header-title {
+  padding-left: spacer(6);
+  padding-bottom: spacer(3);
+}
+.c-case-details {
+  border-radius: 0.375rem;
+  > div {
+    background-color: white;
+    div {
+      border-bottom: 1px solid color(grey4);
+    }
+  }
+  div:first-child {
+    box-shadow: $box-shadow;
+    padding-bottom: 0;
+  }
+}
+
+.c-detail {
+  text-align: start;
+}

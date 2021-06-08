@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input DOB Component renders the DOB component 1`] = `
+<div
+  class="l-flex"
+>
+  <div>
+    <input
+      aria-invalid="false"
+      class="c-input isRequired"
+      id="dobDay"
+      name="dobDay"
+      placeholder="DD"
+      required=""
+      type="text"
+    />
+  </div>
+  <div>
+    <input
+      aria-invalid="false"
+      class="c-input isRequired"
+      id="dobMonth"
+      name="dobMonth"
+      placeholder="MM"
+      required=""
+      type="text"
+    />
+  </div>
+  <div>
+    <input
+      aria-invalid="false"
+      class="c-input isRequired"
+      id="dobYear"
+      name="dobYear"
+      placeholder="YYYY"
+      required=""
+      type="text"
+    />
+  </div>
+</div>
+`;

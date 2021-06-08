@@ -1,0 +1,19 @@
+// ========================================================================
+// TOOLS/FUNCTIONS/GET-COLOUR
+// ========================================================================
+
+// usage
+// color(red);
+
+@function color($val) {
+  @return get-value($val, $colors);
+}
+
+@function color-brand-fade($val, $opacity) {
+  $colour: get-value($val, $colors-brand);
+  @return rgba($colour, $opacity);
+}
+
+@function color-brand($val) {
+  @return get-value($val, $colors-brand);
+}

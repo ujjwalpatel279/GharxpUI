@@ -1,0 +1,75 @@
+// ========================================================================
+// COMPONENTS/SHARED/HEADING
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-page-heading {
+  display: flex;
+  align-items: center;
+  height: spacer(16);
+  padding-left: spacer(3);
+  padding-right: spacer(3);
+  background: white;
+  box-shadow: $box-shadow;
+
+  &__initials {
+    font-size: font-size(3);
+    color: white;
+    font-weight: bolder;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: color-brand(secondary);
+    border-radius: $border-radius;
+
+    svg {
+      font-size: 24px;
+      fill: white;
+    }
+  }
+
+  &__body {
+    padding-left: spacer(2);
+  }
+
+  &__subtext {
+    font-size: font-size(2);
+  }
+
+  &__headingwrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    div {
+      margin-left: spacer(3);
+    }
+  }
+
+  @include bp(10, max) {
+    &__icon {
+      display: none;
+    }
+
+    &__subtext {
+      width: 260px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @include bp(20) {
+    padding: spacer(3) spacer(5);
+
+    &__subtext {
+      font-size: $font-size-px;
+    }
+  }
+}

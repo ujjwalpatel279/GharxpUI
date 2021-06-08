@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  REACT_APP_ACCOUNT_SERVICE_URL: https://brokerui-uat.mutualvision.systems/1B/acount/
+  REACT_APP_APPLICATION_SERVICE_URL: https://brokerui-uat.mutualvision.systems/1B/app/
+  REACT_APP_B2C_POLICY: B2C_1_Dev
+  REACT_APP_CLIENT_ID: 80e2037d-cabb-4457-9c4a-fa1ca7aeef42
+  REACT_APP_TENANT_GUID: dfd20d03-3f09-4cfe-af5a-393b87672c5c
+  REACT_APP_DOMAIN_URL: mvauth.b2clogin.com
+  REACT_APP_LOOKUP_SERVICE_URL: https://brokerui-uat.mutualvision.systems/1B/lookup/
+  REACT_APP_PRODUCT_SERVICE_URL: https://brokerui-uat.mutualvision.systems/1B/product/
+  REACT_APP_REDIRECT_PATH: https://brokerui-uat.mutualvision.systems/1B/
+  REACT_APP_SCOPES: enter
+  REACT_APP_TENANT_URL: mvauth.onmicrosoft.com
+kind: ConfigMap
+metadata:
+  name: onlineuiconfigmap-1b
+  namespace: broker-uat-1b

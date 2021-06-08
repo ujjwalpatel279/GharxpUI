@@ -1,0 +1,79 @@
+@import '~sassHelpers';
+
+.c-card {
+  &__address-contact {
+    display: flex;
+    width: 100%;
+    padding: spacer(2) 0;
+    flex-flow: row;
+    align-items: center;
+    &:last-child {
+      border-bottom: 1px solid color(grey4);
+    }
+    &__icon {
+      display: inline-flex;
+      justify-content: center;
+      width: 15%;
+      transform: scale(0.75);
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    &__text {
+      width: 85%;
+      padding-left: spacer(2);
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 spacer(3) 0 !important;
+    color: color(grey2);
+  }
+  &__header {
+    &__avatar {
+      justify-content: center;
+      margin-left: -0.5em;
+    }
+  }
+}
+
+.s-card-client {
+  &__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: spacer(2) 0;
+    border-bottom: 1px solid color(grey4);
+
+    &__content {
+      display: flex;
+      align-items: center;
+      width: 90%;
+    }
+
+    span {
+      flex: 4;
+      margin-right: spacer(4);
+      font-size: small;
+    }
+  }
+  &__detail-partial {
+    justify-content: flex-end !important;
+  }
+}
+.doc-upload__success {
+  margin-left: spacer(4);
+}
+.c-card {
+  &__footer {
+    padding: 0;
+    .s-card-client {
+      &__detail {
+        border-bottom: 0;
+      }
+    }
+  }
+}

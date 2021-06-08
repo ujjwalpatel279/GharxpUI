@@ -1,0 +1,18 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CUSTOMER-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+
+@include bp(10) {
+  flex-direction: row;
+
+  button {
+    order: 2;
+    margin-left: auto;
+  }
+
+  input {
+    order: 1;
+  }
+}

@@ -1,0 +1,58 @@
+// ========================================================================
+// COMPONENTS/SHARED/PILL
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-pill {
+  display: inline-block;
+  font-size: font-size(1);
+  line-height: 1;
+  padding: spacer(1) spacer(3);
+  color: white;
+  border-radius: 15px;
+  font-weight: bolder;
+
+  &.Active,
+  &.Passed,
+  &.Pending,
+  &.Partial,
+  &.Sent,
+  &.Submitted {
+    background-color: color(pendingDark); //amber
+  }
+
+  &.Returned,
+  &.DeclinedWaitingForMoreInfo,
+  &.AutoRefer,
+  &.Referred,
+  &.Transferred,
+  &.ReferredWaitingForMoreInfo,
+  &.ReferredWithMoreInfoSubmited,
+  &.CallValidateCallCreditRefer {
+    background-color: color(statusBlue); //blue
+  }
+
+  &.Completed,
+  &.Complete,
+  &.Completion,
+  &.Pass,
+  &.Ready,
+  &.Completion {
+    background-color: color(successDark); //green
+  }
+
+  &.Closed,
+  &.Declined,
+  &.AutoDeclined,
+  &.AutoDecisionDeclinedCancellation,
+  &.CallValidateCallCreditFail,
+  &.AutoDeclinedWaitingForMoreInfo,
+  &.DeclinedWaitingForMoreInfo,
+  &.DeclinedWithMoreInfoSubmited,
+  &.AutoDeclinedWithMoreInfoSubmited,
+  &.AutoDeclineCancelled,
+  &.Deleted {
+    background-color: color(errorDark); //red
+  }
+}

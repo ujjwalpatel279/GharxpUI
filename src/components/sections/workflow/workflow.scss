@@ -1,0 +1,76 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/APPLICATION-PROGRESS-BAR
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-app-workflow-wrap {
+  padding: spacer(3);
+  background: white;
+  border-bottom: 1px solid color(grey4);
+
+  @include bp(20) {
+    padding: spacer(3) spacer(5);
+  }
+}
+
+.c-app-workflow {
+  display: flex;
+  background-color: color-brand(primary-light-1);
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  &__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: font-size(2);
+    padding: 6px spacer(3);
+    color: white;
+
+    svg {
+      font-size: 20px;
+      fill: white;
+    }
+
+    &.isActive {
+      background-color: color-brand(primary);
+    }
+
+    &.isComplete {
+      background-color: color(successDark);
+    }
+
+    &:not(:last-child) {
+      border-right: 2px solid white;
+    }
+  }
+
+  @include bp(20) {
+    display: inline-flex;
+
+    &__item {
+      flex: auto;
+    }
+
+    svg {
+      margin-right: spacer(2);
+    }
+  }
+
+  @include bp(20, max) {
+    &__item {
+      justify-content: center;
+    }
+
+    &__name {
+      @include hidden-visually;
+    }
+  }
+
+  @include bp(30) {
+    &__item {
+      width: 200px;
+    }
+  }
+}

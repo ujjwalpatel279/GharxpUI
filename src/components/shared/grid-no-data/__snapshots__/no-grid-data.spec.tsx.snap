@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No Grid Data Component renders the no grid data component 1`] = `
+<div
+  class="c-grid-no-data"
+>
+  <img
+    alt="no-data"
+    class="c-grid-no-data__image"
+    src="[object Object]"
+  />
+  <div
+    class="c-grid-no-data__message"
+  >
+    
+     
+  </div>
+</div>
+`;

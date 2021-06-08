@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows card bad redirects footer show bad redirects card footer 1`] = `
+<DocumentFragment>
+  <div
+    class="c-card__footer "
+  >
+    <footer>
+      <div>
+        <button
+          class="c-btn c-btn--primary full-width"
+          type="button"
+        >
+          <span>
+            Try Again
+          </span>
+        </button>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

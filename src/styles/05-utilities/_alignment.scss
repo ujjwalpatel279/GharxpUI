@@ -1,0 +1,25 @@
+// ========================================================================
+// UTILITIES/ALIGNMENT
+// ========================================================================
+
+.u-flex {
+  display: flex;
+
+  &__align-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__align-right {
+    margin-left: auto;
+  }
+  &__centered {
+    justify-content: center;
+  }
+  &__flexColumn {
+    flex-direction: column;
+  }
+  &__alignedItems {
+    align-items: center;
+  }
+}

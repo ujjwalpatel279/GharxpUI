@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Currency Component renders the currency component 1`] = `
+<div
+  class="c-input-currency"
+>
+  <span
+    class="c-input-currency__icon"
+  >
+    <svg
+      class="c-icon"
+      height="16"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <path
+        d="M8.972 1.111c1.178 0 2.295 0.26 3.349 0.781l-0.568 1.237c-0.955-0.478-1.876-0.716-2.763-0.716-0.763 0-1.34 0.192-1.73 0.577-0.385 0.385-0.577 1.011-0.577 1.879v2.744h3.926v1.182h-3.926v2.056c0 0.62-0.102 1.141-0.307 1.563-0.198 0.422-0.527 0.769-0.986 1.042h7.396v1.433h-9.573v-1.312c1.271-0.291 1.907-1.194 1.907-2.707v-2.075h-1.842v-1.182h1.842v-2.94c0-1.104 0.347-1.972 1.042-2.605 0.695-0.639 1.631-0.958 2.809-0.958z"
+      />
+    </svg>
+  </span>
+  <input
+    aria-invalid="false"
+    class="c-input"
+    id="amount"
+    name="amount"
+    type="number"
+  />
+</div>
+`;

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows card document details footer show client document card footer 1`] = `
+<DocumentFragment>
+  <div
+    class="c-card__footer "
+  >
+    <div
+      class="modal display-none doc-upload"
+    >
+      <section
+        class="modal-main"
+      >
+        <form>
+          <div
+            class="c-form-field"
+          >
+            <label
+              class="c-form-field__label"
+            >
+              File to upload
+            </label>
+            <input
+              accept="image/png, image/jpeg, application/pdf"
+              aria-invalid="false"
+              id="customerDocument"
+              name="customerDocument"
+              type="file"
+            />
+            <p
+              class="c-form-field__error"
+              role="alert"
+            >
+              Please select a file of type jpg/png/pdf with a file size less than 4MB
+            </p>
+          </div>
+          <div
+            class="c-form-field"
+          >
+            <label
+              class="c-form-field__label"
+            >
+              Category
+            </label>
+            <fieldset>
+              <legend>
+                Select a document category
+              </legend>
+              <div
+                class="l-flex l-flex--wrap"
+              />
+            </fieldset>
+          </div>
+          <div
+            class="c-form-field"
+          >
+            <label
+              class="c-form-field__label"
+            >
+              File Description
+            </label>
+            <input
+              aria-invalid="false"
+              class="c-input"
+              id="fileDescription"
+              name="fileDescription"
+              placeholder="File Description"
+              type="text"
+            />
+          </div>
+          <p
+            class="u-mb-1"
+          />
+          <button
+            class="c-btn c-btn--secondary c-btn--small"
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
+          <button
+            class="c-btn c-btn--primary c-btn--small disabled upload-button"
+            disabled=""
+            type="submit"
+          >
+            <span>
+              Upload
+            </span>
+          </button>
+        </form>
+      </section>
+    </div>
+    <footer
+      class="s-card-client__detail s-card-client__detail-partial"
+    >
+      <button
+        class="c-btn c-btn--secondary c-btn--small c-btn--icon-left"
+        type="button"
+      >
+        <svg
+          class="c-icon"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M7 7v-7h2v7h7v2h-7v7h-2v-7h-7v-2h7z"
+          />
+        </svg>
+        <span>
+          Add document
+        </span>
+      </button>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

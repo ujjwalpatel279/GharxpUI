@@ -1,0 +1,29 @@
+export interface EsisSummaryInterface {
+  aprc?: number;
+  baseRate?: number;
+  description: string;
+  documentUrl?: string;
+  erc?: number;
+  fixed?: boolean;
+  initialRate?: number;
+  interestOnlyAmount?: number;
+  isErc?: string;
+  isProductFeeFixed?: boolean;
+  isProductRateAdjustmentNegative?: boolean;
+  isRegulated?: boolean;
+  loanMasterCode?: string;
+  loanPurpose?: string;
+  maximumLoanToValue: number;
+  minimumLoanToValue: number;
+  mortgageTerm: number;
+  pageCount?: number;
+  productCode: string;
+  productFee?: number;
+  productId: number;
+  productTypeId: number;
+  rate?: number;
+  rateAdjustment?: number;
+  repaymentStrategyId?: number;
+  schemeCode: string;
+  standardVariableRate: number;
+}

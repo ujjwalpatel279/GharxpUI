@@ -1,0 +1,22 @@
+// ========================================================================
+// COMPONENTS/PAGES/HOME/INTRO
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-intro {
+  position: relative;
+  padding-top: spacer(4);
+  padding-bottom: spacer(4);
+  text-align: center;
+
+  @include bp(20) {
+    text-align: left;
+
+    a {
+      position: absolute;
+      top: spacer(4);
+      right: 0;
+    }
+  }
+}

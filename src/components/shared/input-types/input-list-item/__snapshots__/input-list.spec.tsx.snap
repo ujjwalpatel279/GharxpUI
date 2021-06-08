@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input List Item Component renders the component 1`] = `
+<label
+  class="c-input-list-item"
+  for="inputList"
+>
+  <input
+    id="inputList"
+    name="inputName"
+    type="radio"
+    value="inputValue"
+  />
+  <span
+    class="c-radio-input__inner"
+  >
+    <span>
+      inputValue
+    </span>
+  </span>
+</label>
+`;

@@ -1,0 +1,18 @@
+// ========================================================================
+// SETTINGS/TYPOGRAPHY
+// ========================================================================
+
+// These core setting underpin how the framework functions, by setting the font-size and line height used for typographical styles and baseline grid.
+// The values are defined in pixels here but are converted to more appropriate units when used.
+
+// CORE
+$font-size-px: 16px;
+$line-height-px: 24px; // $font-size-px * 1.5
+
+// TYPE
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap';
+
+$font-family: 'Open Sans', sans-serif;
+$font-size: 100%;
+$line-height: $line-height-px / $font-size-px;

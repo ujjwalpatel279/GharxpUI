@@ -1,0 +1,91 @@
+@import '~sassHelpers';
+.notes {
+  &__created {
+    margin-top: spacer(5);
+  }
+
+  &__list {
+    max-height: 1000px;
+    overflow-y: scroll;
+  }
+
+  .c-btn--primary {
+    height: 2rem;
+    margin-top: spacer(1);
+    padding-left: spacer(4);
+    padding-right: 0.35rem;
+    svg {
+      margin-top: 0;
+    }
+  }
+
+  .hidden-label {
+    display: none;
+  }
+
+  &__sent,
+  &__recd {
+    background-color: #f2f7fe;
+    padding: spacer(1);
+    margin: spacer(6) 0;
+    border-radius: $border-radius;
+    box-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+    border: 0.01em rgba(0, 0, 0, 0.1);
+    border-style: inset;
+    .u-flex__align-right {
+      float: right;
+      small {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__recd {
+    background-color: white;
+  }
+
+  &__recd-text {
+    color: color-brand(secondary);
+    padding-left: spacer(1);
+    font-weight: bolder;
+  }
+
+  &__recd-hidden {
+    display: none;
+  }
+
+  &__text {
+    color: color-brand(primary);
+  }
+
+  &__add_entry {
+    position: absolute;
+    // display: none;
+    top: 0;
+    right: 0.2rem;
+  }
+
+  &__text_field {
+    position: relative;
+    box-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+    border: 1px solid color(grey3);
+    border-radius: $border-radius;
+    background: white;
+    padding-left: spacer(1);
+    input {
+      border: 0;
+      width: 88%;
+    }
+  }
+
+  svg {
+    margin-top: spacer(1);
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+}
+
+.box {
+  overflow-x: hidden;
+  padding: spacer(1);
+}

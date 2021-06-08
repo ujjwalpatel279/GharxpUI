@@ -1,0 +1,30 @@
+// ========================================================================
+// SETTINGS/COLOURS
+// ========================================================================
+
+// MAP
+$colors: (
+  navy1: #0f2a3f,
+  navy2: #1c3548,
+  navy3: #32495b,
+  navy4: #cacfd4,
+  navy5: #f8f9f9,
+  grey1: #232323,
+  grey2: #656465,
+  grey3: #b2b2b2,
+  grey4: #e9e8e9,
+  successDark: #2fbc78,
+  successLight: #f5fcf8,
+  pendingDark: #ff833d,
+  pendingLight: #fff9f5,
+  actionRequired: #0066ea,
+  errorDark: #ff3d3d,
+  errorLight: #fff6f6,
+  blue: #0066ea,
+  orange: #fd9859,
+  statusBlue: #3d5cff,
+);
+
+// page
+$col-bg: map-get($colors, navy5);
+$col-text: map-get($colors, grey1);

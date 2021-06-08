@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Bool Component renders the bool component 1`] = `
+<fieldset>
+  <legend>
+    Bool legend
+  </legend>
+  <div
+    class="l-flex l-flex--wrap"
+  >
+    <div>
+      <label
+        class="c-input-list-item"
+        for="yes-inputbool"
+      >
+        <input
+          id="yes-inputbool"
+          name="inputbool"
+          type="radio"
+          value="Yes"
+        />
+        <span
+          class="c-radio-input__inner"
+        >
+          <span>
+            Yes
+          </span>
+        </span>
+      </label>
+    </div>
+    <div>
+      <label
+        class="c-input-list-item"
+        for="no-inputbool"
+      >
+        <input
+          id="no-inputbool"
+          name="inputbool"
+          type="radio"
+          value="No"
+        />
+        <span
+          class="c-radio-input__inner"
+        >
+          <span>
+            No
+          </span>
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;

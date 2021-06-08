@@ -1,0 +1,24 @@
+// ========================================================================
+// COMPONENTS/SHARED/FORM-INPUT
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-form-input {
+  height: spacer(10);
+  padding-left: spacer(2);
+  padding-right: spacer(2);
+  border: 1px solid color(grey2);
+  border-radius: $border-radius;
+  background-color: white;
+
+  &.isInvalid {
+    background-color: color(errorLight);
+    border-color: color(errorDark);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary);
+  }
+}

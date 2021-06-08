@@ -1,0 +1,89 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-header {
+  display: flex;
+  position: relative;
+  padding: spacer(3);
+  background-color: white;
+  border-bottom: 1px solid color(grey4);
+  z-index: 100;
+
+  &__logo,
+  &__toggle-nav,
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    justify-content: center;
+  }
+
+  &__user {
+    position: relative;
+    justify-content: flex-end;
+  }
+
+  &__toggle-nav-btn,
+  &__toggle-user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__toggle-nav-btn {
+    background: color-brand(primary-light-2);
+
+    svg {
+      font-size: 20px;
+      fill: color-brand(primary);
+    }
+  }
+
+  &__toggle-user-btn {
+    color: white;
+    background: color-brand(secondary);
+  }
+
+  &__toggle-announcement-btn {
+    background: color(grey4);
+  }
+
+  @include bp(20, max) {
+    justify-content: space-between;
+
+    &__logo {
+      flex: 2;
+      order: 2;
+    }
+    &__toggle-nav {
+      flex: 1;
+      order: 1;
+    }
+    &__user {
+      flex: 1;
+      order: 3;
+    }
+  }
+
+  @include bp(20) {
+    padding: spacer(3) spacer(5);
+
+    &__logo {
+      margin-right: spacer(4);
+    }
+    &__toggle-nav {
+      display: none;
+    }
+    &__user {
+      margin-left: auto;
+    }
+  }
+}

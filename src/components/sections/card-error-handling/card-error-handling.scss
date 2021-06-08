@@ -1,0 +1,75 @@
+@import '~sassHelpers';
+
+.full-width {
+  width: 100%;
+}
+
+.c-card-bad-redirects__header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  .c-icon {
+    fill: #ffffff;
+  }
+}
+.c-card-bad-redirects__header__top {
+  border-bottom: 0;
+}
+footer {
+  text-align: center;
+}
+.c-card-bad-redirects {
+  &__address {
+    display: flex;
+    width: 100%;
+    padding: spacer(2) 0;
+    border-bottom: 1px solid color(grey4);
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15%;
+    }
+    &__text {
+      width: 85%;
+      padding-left: spacer(2);
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: spacer(3) 0;
+    color: color(grey2);
+  }
+}
+
+.s-card-bad-redirects {
+  &__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: spacer(2) 0;
+    border-bottom: 1px solid color(grey4);
+
+    &__content {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    b {
+      text-align: center;
+    }
+
+    span {
+      flex: 4;
+      margin-right: spacer(4);
+      font-size: small;
+    }
+  }
+}

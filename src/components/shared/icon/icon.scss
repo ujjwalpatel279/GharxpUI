@@ -1,0 +1,38 @@
+// ========================================================================
+// COMPONENTS/SHARED/ICON
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  fill: color(grey3);
+  stroke: currentColor;
+
+  &--primary {
+    fill: var(--primary);
+    &__info {
+      path:first-of-type {
+        fill: color(grey3);
+      }
+      path:last-of-type {
+        fill: color(grey1);
+      }
+    }
+  }
+
+  &--blue {
+    fill: color(blue);
+  }
+
+  &--small {
+    font-size: font-size(2);
+  }
+
+  &--large {
+    font-size: font-size(3);
+  }
+}

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component renders a disabled button 1`] = `
+<button
+  class="c-btn c-btn--primary disabled"
+  disabled=""
+  type="button"
+>
+  <span>
+    Button Disabled
+  </span>
+</button>
+`;
+
+exports[`Button Component renders a full width button 1`] = `
+<button
+  class="c-btn c-btn--primary u-width-100"
+  type="button"
+>
+  <span>
+    Button Full Width
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the primary button 1`] = `
+<button
+  class="c-btn c-btn--primary"
+  type="button"
+>
+  <span>
+    Primary Button
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the primary button large 1`] = `
+<button
+  class="c-btn c-btn--primary c-btn--large"
+  type="button"
+>
+  <span>
+    Primary Button Large
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the primary button navy 1`] = `
+<button
+  class="c-btn c-btn--navy"
+  type="button"
+>
+  <span>
+    Button Navy
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the primary button small 1`] = `
+<button
+  class="c-btn c-btn--primary c-btn--small"
+  type="button"
+>
+  <span>
+    Primary Button Small
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the secondary button 1`] = `
+<button
+  class="c-btn c-btn--secondary"
+  type="button"
+>
+  <span>
+    Secondary Button
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the secondary button Small 1`] = `
+<button
+  class="c-btn c-btn--secondary c-btn--small"
+  type="button"
+>
+  <span>
+    Secondary Button Small
+  </span>
+</button>
+`;
+
+exports[`Button Component renders the secondary button large 1`] = `
+<button
+  class="c-btn c-btn--secondary c-btn--large"
+  type="button"
+>
+  <span>
+    Secondary Button Large
+  </span>
+</button>
+`;

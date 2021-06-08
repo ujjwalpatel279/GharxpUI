@@ -1,0 +1,156 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CUSTOMER-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-client-document-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: min-content;
+}
+.client-details-container {
+  background: white;
+  border: 1px solid color(grey4);
+  box-shadow: $box-shadow;
+  border-top: 4px solid color-brand(primary);
+
+  .u-flex {
+    padding-left: spacer(5);
+    &:first-child {
+      padding-left: spacer(2);
+    }
+    .c-icon {
+      margin-top: spacer(1);
+    }
+  }
+
+  .c-customer-document-label {
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+    margin-bottom: spacer(2);
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  .c-overflow {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.3125rem;
+  }
+
+  .doc-upload__success svg {
+    margin-left: auto;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.125rem;
+    background-color: color(successDark);
+    border-radius: 50%;
+    fill: white;
+  }
+
+  .client-contact-details {
+    padding-left: spacer(3);
+    //display: block;
+    & span {
+      display: none;
+      @include bp(20, max) {
+        display: inline;
+      }
+    }
+    & div {
+      display: inline;
+      @include bp(20, max) {
+        display: none;
+      }
+    }
+  }
+
+  .client-details__user-btn {
+    color: white;
+    background: color(orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    align-self: center;
+  }
+
+  .client-details__docs {
+    color: color-brand(primary);
+    padding-bottom: spacer(4);
+    & svg {
+      margin-left: auto;
+      width: 1.25rem;
+      height: 1.25rem;
+      padding: 0.125rem;
+      fill: #0066ea;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .main-upload-button-hidden {
+    display: none;
+  }
+
+  .main-upload-button {
+    display: initial;
+  }
+
+  .c-grid td {
+    text-align: left;
+    min-width: auto !important;
+    padding-right: 1.5rem;
+  }
+
+  tr:not([class]) td:first-child {
+    position: relative;
+
+    &:before {
+      background-color: white !important;
+    }
+  }
+
+  .client-doc__download-text {
+    display: inline;
+    @include bp(10, max) {
+      display: none;
+    }
+  }
+
+  .c-customer-grid {
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+    margin-bottom: spacer(2);
+    margin-top: spacer(2);
+
+    @include bp(10, max) {
+      input,
+      button {
+        width: 100%;
+      }
+
+      button {
+        margin-bottom: spacer(2);
+      }
+    }
+
+    @include bp(10) {
+      flex-direction: row;
+
+      button {
+        order: 2;
+        margin-left: auto;
+      }
+
+      input {
+        order: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.c-add-fee {
+  .c-heading {
+    text-align: start;
+  }
+
+  &__summary {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    display: flex;
+
+    > button {
+      flex-shrink: 1;
+    }
+    > span {
+      flex-grow: 2;
+      align-self: end;
+      padding-top: 0.6rem;
+      > b {
+        text-align: start;
+      }
+    }
+  }
+}

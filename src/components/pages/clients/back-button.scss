@@ -1,0 +1,29 @@
+@import '~sassHelpers';
+
+.back-button {
+
+  position: relative;
+  display: flex;
+  height: 4rem;
+  background-color: white;
+  border-top: 0.0625rem solid #e9e8e9;
+  Button{
+    position:absolute;
+    width: 15%;
+    margin-top: 0.75rem;
+    background-color: black;
+    color:blanchedalmond;
+
+    svg {
+      fill: white;
+    }
+  }
+
+  &__display-btn{
+    display: none;
+  }
+
+  @include bp(20) {
+    display: none;
+  }
+}

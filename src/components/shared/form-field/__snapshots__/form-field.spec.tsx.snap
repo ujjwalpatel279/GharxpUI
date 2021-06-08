@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField Component renders the form field component 1`] = `
+<div
+  class="c-form-field"
+>
+  <label
+    class="c-form-field__label"
+  >
+    testLabel
+  </label>
+  Form Field Component
+</div>
+`;

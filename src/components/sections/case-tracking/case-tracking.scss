@@ -1,0 +1,42 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/CASE-TRACKING
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-case-tracking {
+  .c-section {
+    &__body {
+      padding: unset;
+      padding-bottom: spacer(5);
+    }
+  }
+}
+.c-case-tracking-desktop {
+  button {
+    box-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.1);
+  }
+}
+@include bp(20, max) {
+  .c-case-tracking-desktop {
+    display: none !important;
+  }
+  .c-case-tracking-controls {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    left: 0.1rem;
+    padding: spacer(2) spacer(3s);
+  }
+}
+
+@include bp(20) {
+  .c-case-tracking-mobile {
+    display: none !important;
+  }
+}
+.c-case-cancel {
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.1);
+}

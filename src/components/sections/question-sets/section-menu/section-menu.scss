@@ -1,0 +1,98 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/HEADER/SECTION-MENU
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-section-menu {
+  background-color: color(navy1);
+  color: white;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: spacer(16);
+    padding-left: spacer(3);
+    padding-right: spacer(3);
+    border-bottom: 1px solid color(navy3);
+
+    > svg {
+      margin-right: spacer(1);
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin-left: auto;
+      background-color: color(navy2);
+      border-radius: 50%;
+
+      span {
+        @include hidden-visually;
+      }
+    }
+
+    @include bp(20) {
+      button {
+        display: none;
+      }
+    }
+  }
+
+  &__body {
+    padding: spacer(2) 0;
+  }
+}
+
+.c-section-menu-list {
+  &__parent-link,
+  &__child-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: spacer(3) spacer(3) spacer(3) spacer(10);
+  }
+
+  &__parent-link svg:first-child {
+    position: absolute;
+    left: spacer(4);
+    top: 50%;
+    font-size: 12px;
+    transform: translateY(-50%);
+  }
+
+  &__parent-link svg:last-child,
+  &__child-link svg {
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    background-color: color(successDark);
+    border-radius: 50%;
+    fill: white;
+  }
+
+  &__child-link:hover {
+    text-decoration: none;
+    background-color: color(navy3);
+  }
+}
+
+.l-question-sets-anchor-bg {
+  @include bp(20) {
+    background-color: color(navy1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 18.75rem;
+    z-index: -1;
+  }
+  @include bp(20, max) {
+    @include hidden-visually;
+  }
+}

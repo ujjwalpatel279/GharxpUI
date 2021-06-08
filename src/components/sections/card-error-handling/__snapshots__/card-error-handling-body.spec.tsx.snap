@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows card bad redirects body show bad redirects information on card 1`] = `
+<DocumentFragment>
+  <div
+    class="c-card__body"
+  >
+    <div
+      class="s-card-bad-redirects__detail"
+    >
+      <div
+        class="s-card-bad-redirects__detail__content"
+      >
+        <b>
+          Something went wrong !
+        </b>
+      </div>
+    </div>
+    <div
+      class="s-card-bad-redirects__detail"
+    >
+      <div
+        class="c-cart__detail__content"
+      >
+        <p>
+          something went wrong and we couldn't complete your request. please refresh the page to try again
+        </p>
+         
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

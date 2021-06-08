@@ -1,0 +1,12 @@
+// ========================================================================
+// SETTINGS/BREAKPOINTS
+// ========================================================================
+
+// Allows you to set all site breakpoints used throughout the site,
+// values are used to allow multiple breakpoitns to be set based on content and not devices
+
+$breakpoints: (
+  10: 600px,
+  20: 900px,
+  30: 1150px,
+);

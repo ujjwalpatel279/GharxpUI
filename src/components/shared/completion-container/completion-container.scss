@@ -1,0 +1,22 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/COMPLETION-CONTAINER
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-completion-container {
+  background: white;
+  border: 1px solid color(grey4);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  &__body {
+    padding: spacer(6) spacer(4) spacer(4) spacer(4);
+    text-align: center;
+  }
+
+  &__footer {
+    padding: spacer(4);
+    border-top: 1px solid color(grey4);
+  }
+}

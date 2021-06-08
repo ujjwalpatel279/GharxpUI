@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorldPay Component renders the WorldPay component 1`] = `
+<div
+  class="modal display-block"
+>
+  <section
+    class="modal-main"
+  >
+    <h3
+      class="c-heading c-heading--h3"
+    >
+      Client Contact Details
+    </h3>
+    <br />
+    <form>
+      
+      <div
+        class="c-form-field"
+      >
+        <label
+          class="c-form-field__label"
+        >
+          Email Address
+        </label>
+        <input
+          aria-invalid="false"
+          class="c-input"
+          id="emailAddress"
+          name="emailAddress"
+          placeholder="Email address"
+          type="text"
+        />
+      </div>
+      <div
+        class="c-form-field"
+      >
+        <label
+          class="c-form-field__label"
+        >
+          Address Line 1
+        </label>
+        <input
+          aria-invalid="false"
+          class="c-input"
+          id="addressLine1"
+          name="addressLine1"
+          placeholder="Address Line 1"
+          type="text"
+        />
+      </div>
+      <div
+        class="c-form-field"
+      >
+        <label
+          class="c-form-field__label"
+        >
+          City
+        </label>
+        <input
+          aria-invalid="false"
+          class="c-input"
+          id="city"
+          name="city"
+          placeholder="City"
+          type="text"
+        />
+      </div>
+      <div
+        class="c-form-field"
+      >
+        <label
+          class="c-form-field__label"
+        >
+          Postcode
+        </label>
+        <input
+          aria-invalid="false"
+          class="c-input"
+          id="postcode"
+          name="postcode"
+          placeholder="Postcode"
+          type="text"
+        />
+      </div>
+      <div
+        class="c-form-field"
+      >
+        <label
+          class="c-form-field__label"
+        >
+          Country
+        </label>
+        <fieldset>
+          <legend>
+            Select a country
+          </legend>
+          <div
+            class="l-flex l-flex--wrap"
+          >
+            <div>
+              <label
+                class="c-input-list-item"
+                for="-1"
+              >
+                <input
+                  id="-1"
+                  name="countryCode"
+                  type="radio"
+                  value="GB"
+                />
+                <span
+                  class="c-radio-input__inner"
+                >
+                  <span>
+                    GB
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div>
+              <label
+                class="c-input-list-item"
+                for="-2"
+              >
+                <input
+                  id="-2"
+                  name="countryCode"
+                  type="radio"
+                  value="US"
+                />
+                <span
+                  class="c-radio-input__inner"
+                >
+                  <span>
+                    US
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div
+        class="c-form-field"
+      >
+        <label
+          class="c-form-field__label"
+        >
+          Reference
+        </label>
+        <input
+          aria-invalid="false"
+          class="c-input"
+          id="reference"
+          name="reference"
+          placeholder="Reference"
+          type="text"
+        />
+      </div>
+      <button
+        class="c-btn c-btn--navy c-btn--small"
+        type="button"
+      >
+        <span>
+          Cancel
+        </span>
+      </button>
+      <button
+        class="c-btn c-btn--primary c-btn--small upload-button"
+        type="submit"
+      >
+        <span>
+          Pay
+        </span>
+      </button>
+    </form>
+  </section>
+</div>
+`;

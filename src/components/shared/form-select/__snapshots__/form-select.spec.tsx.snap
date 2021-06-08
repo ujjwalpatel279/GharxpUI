@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component renders the form select component 1`] = `
+<div
+  class="c-form-select-wrapper"
+>
+  <select
+    aria-invalid="false"
+    class="c-form-select"
+    data-testid="form-select"
+    id="testSelect"
+    name="testSelect"
+  >
+    <option
+      value=""
+    >
+      Please select
+    </option>
+    <option
+      value="One"
+    >
+      One
+    </option>
+    <option
+      value="Two"
+    >
+      Two
+    </option>
+  </select>
+</div>
+`;

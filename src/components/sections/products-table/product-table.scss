@@ -1,0 +1,26 @@
+// ========================================================================
+// COMPONENTS/SECTIONS/PRODUCT-TABLE
+// ========================================================================
+
+@import '~sassHelpers';
+.c-product {
+  display: flex;
+  flex-direction: column;
+
+  @include bp(10) {
+    flex-direction: row;
+    align-items: center;
+
+    div:first-child {
+      margin-bottom: 0;
+      margin-right: spacer(2);
+    }
+  }
+}
+.c-product-table {
+  tbody {
+    tr td:first-child {
+      text-align: left;
+    }
+  }
+}

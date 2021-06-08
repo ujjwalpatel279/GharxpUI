@@ -1,0 +1,22 @@
+// ========================================================================
+// COMPONENTS/SHARED/INPUT-TYPES/CURRENCY
+// ========================================================================
+
+@import '~sassHelpers';
+
+.c-input-search {
+  position: relative;
+  display: inline-block;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: spacer(2);
+    transform: translateY(-50%);
+  }
+
+  input {
+    padding-left: spacer(8);
+    box-shadow: inset 0px 3px 3px rgba(black, 0.1);
+  }
+}

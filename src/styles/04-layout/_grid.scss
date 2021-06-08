@@ -1,0 +1,17 @@
+// ========================================================================
+// LAYOUT/GRID
+// ========================================================================
+
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-gap: $gutter;
+}
+
+@include grid-widths;
+
+@each $bp, $query in $breakpoints {
+  @include bp($bp) {
+    @include grid-widths($at + 'bp' + $bp);
+  }
+}
