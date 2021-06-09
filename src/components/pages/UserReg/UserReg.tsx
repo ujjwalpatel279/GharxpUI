@@ -42,8 +42,6 @@ export const UserRegPage: FunctionComponent = (): ReactElement => {
     <>
       <PageHeading headingLevel={2} title="User" />
       <Container fullWidth>
-        <AddUser title={[]} handleCancel={() => toggleShowAddClient(!showAddUser)} />
-
         <UserTable
           UserList={user}
           handleKey={handleKey}

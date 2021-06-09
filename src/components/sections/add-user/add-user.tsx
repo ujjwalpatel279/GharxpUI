@@ -42,11 +42,11 @@ export const AddUser: FunctionComponent<AddUserProps> = ({
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="c-add-client">
       <FormField id="name" label="User name" >
-        <Input id="name" />
+        <Input id="name" ref={register} />
       </FormField>
 
       <FormField id="contactno" label="contactno" >
-        <Input id="contactno" />
+        <Input id="contactno" ref={register} />
       </FormField>
       <Button type="submit" variant="primary" childClasses="u-mr-2">
         Add new User
