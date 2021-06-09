@@ -201,6 +201,8 @@ export const services = {
   saveClient: async (customer: CustomerDetailInterface): Promise<ServiceHandlingInterface<void>> =>
     api.post(`${Config.accountService}Customer/Save/${await getBrokerId()}`, JSON.stringify(customer)),
 
+
+
   removeClient: async (customerId: number): Promise<boolean> =>
     api.delete(`${Config.accountService}Customer/Delete/${await getBrokerId()}/${customerId}`),
 
@@ -290,8 +292,8 @@ export const services = {
     api.get(
       `${process.env.REACT_APP_LOOKUP_SERVICE_URL}api/User/`,
     ),
-  // getUser: (): Promise<ServiceHandlingInterface<UserInterface[]>> =>
-  //   api.get<UserInterface[]>(`${Config.lookupService}api/User/`),
+  saveUser: async (user: UserInterface): Promise<ServiceHandlingInterface<void>> =>
+    api.post(`${process.env.REACT_APP_LOOKUP_SERVICE_URL}api/User/`, JSON.stringify(user)),
 
   getAutoDeclineAnswers: async (
     formSectionId: number,

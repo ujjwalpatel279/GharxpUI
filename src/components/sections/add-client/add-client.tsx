@@ -56,6 +56,7 @@ export const AddClient: FunctionComponent<AddClientProps> = ({
       address: address,
       correspondenceAddress: address,
     };
+    console.log(customerDetail);
     const res = await services.saveClient(customerDetail);
     if (res !== null) {
       handleCancel(false);

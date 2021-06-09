@@ -8,11 +8,14 @@ import { UserInterface } from '../../../shared/models';
 import { UserTable } from '../../sections/User-table/User-table';
 import { services } from '../../../shared/api/services';
 import { TitleInterface } from '../../../shared/models';
+import { AddUser } from '../../sections/add-user/add-user';
 
 
 export const UserRegPage: FunctionComponent = (): ReactElement => {
   const [keyPressed, setKeyPressed] = useState<string | null>(' ');
   const [user, setUser] = useState<UserInterface[]>([]);
+  const [showAddUser, toggleShowAddClient] = useState(false);
+
   const [formTitles, setAddClientTitles] = useState<TitleInterface[] | []>([]);
   const [sortColumn, setSortColumn] = useState<string>('Description');
   const [sortOrder, setSortOrder] = useState<string>('Asc');
@@ -39,6 +42,8 @@ export const UserRegPage: FunctionComponent = (): ReactElement => {
     <>
       <PageHeading headingLevel={2} title="User" />
       <Container fullWidth>
+        <AddUser title={[]} handleCancel={() => toggleShowAddClient(!showAddUser)} />
+
         <UserTable
           UserList={user}
           handleKey={handleKey}

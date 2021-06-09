@@ -24,11 +24,12 @@ export const api = {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
         Accept: 'application/json',
-        authorization: `Bearer ${await getToken()}`,
+        //authorization: `Bearer ${await getToken()}`,
       },
       mode: 'cors',
       body: data,
     });
+    console.log(response, 'callingfirst');
     const hasData = response.ok;
     const result: ServiceHandlingInterface<TData> = {
       data: hasData ? await response?.json() : undefined,
@@ -36,6 +37,7 @@ export const api = {
       loading: false,
     };
     return result;
+    console.log(result);
   },
   getAsBlob: async (url: RequestInfo): Promise<Blob> => {
     const response = await fetch(url, {
