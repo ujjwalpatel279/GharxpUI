@@ -206,6 +206,7 @@ export const services = {
   removeClient: async (customerId: number): Promise<boolean> =>
     api.delete(`${Config.accountService}Customer/Delete/${await getBrokerId()}/${customerId}`),
 
+
   UpdateBroker: async (broker: BrokerInterface): Promise<ServiceHandlingInterface<void>> =>
     api.post(
       `${process.env.REACT_APP_ACCOUNT_SERVICE_URL}Broker/Update/${await getBrokerId()}`,
@@ -294,6 +295,16 @@ export const services = {
     ),
   saveUser: async (user: UserInterface): Promise<ServiceHandlingInterface<void>> =>
     api.post(`${process.env.REACT_APP_LOOKUP_SERVICE_URL}api/User/`, JSON.stringify(user)),
+
+
+  deleteUser: async (id: number): Promise<boolean> =>
+    api.delete(`${process.env.REACT_APP_LOOKUP_SERVICE_URL}api/User/,${id}`),
+
+  // removeClient: async (customerId: number): Promise<boolean> =>
+  // api.delete(`${Config.accountService}Customer/Delete/${await getBrokerId()}/${customerId}`),
+
+  // deleteCustomerDocument: async (documentId: number): Promise<boolean> =>
+  // api.delete(`${Config.accountService}Customer/DeleteDocument/${await getBrokerId()}/${documentId}`),
 
   getAutoDeclineAnswers: async (
     formSectionId: number,

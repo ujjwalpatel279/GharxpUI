@@ -59,7 +59,7 @@ export const api = {
       headers: {
         'Access-Control-Allow-Origin': '*',
         Accept: 'application/json',
-        authorization: `Bearer ${await getToken()}`,
+        // authorization: `Bearer ${await getToken()}`,
       },
       mode: 'cors',
     });

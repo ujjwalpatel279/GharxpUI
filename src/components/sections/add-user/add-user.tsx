@@ -16,6 +16,11 @@ interface AddUserProps {
 type Inputs = {
   name: string;
   contactno: string;
+  AreaName: string;
+  EmailId: string;
+  Pincode: string;
+  City: string;
+  State: string;
 };
 export const AddUser: FunctionComponent<AddUserProps> = ({
   title,
@@ -28,6 +33,11 @@ export const AddUser: FunctionComponent<AddUserProps> = ({
     const user: UserInterface = {
       name: data.name,
       contactNo: data.contactno,
+      areaName: data.AreaName,
+      pincode: data.Pincode,
+      emailId: data.EmailId,
+      city: data.City,
+      state: data.State,
       //pageCount : 
     };
     console.log(user);
@@ -39,6 +49,7 @@ export const AddUser: FunctionComponent<AddUserProps> = ({
     }
   };
 
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="c-add-client">
       <FormField id="name" label="User name" >
@@ -48,6 +59,27 @@ export const AddUser: FunctionComponent<AddUserProps> = ({
       <FormField id="contactno" label="contactno" >
         <Input id="contactno" ref={register} />
       </FormField>
+
+      <FormField id="AreaName" label="AreaName" >
+        <Input id="AreaName" ref={register} />
+      </FormField>
+
+      <FormField id="Pincode" label="Pincode" >
+        <Input id="Pincode" ref={register} />
+      </FormField>
+
+      <FormField id="EmailId" label="EmailId" >
+        <Input id="EmailId" ref={register} />
+      </FormField>
+
+      <FormField id="City" label="City" >
+        <Input id="City" ref={register} />
+      </FormField>
+
+      <FormField id="State" label="State" >
+        <Input id="State" ref={register} />
+      </FormField>
+
       <Button type="submit" variant="primary" childClasses="u-mr-2">
         Add new User
         </Button>
