@@ -13,10 +13,11 @@ import { AddUser } from '../../sections/add-user/add-user';
 
 export const UserRegPage: FunctionComponent = (): ReactElement => {
   const [keyPressed, setKeyPressed] = useState<string | null>(' ');
-  const [user, setUser] = useState<UserInterface[]>([]);
+  const [users, setUsers] = useState<UserInterface[]>([]);
+  const [selectedUser, setSelectedUser] = useState<UserInterface>();
   const [activeClient, setActiveClient] = useState<UserInterface | null>(null);
   const [showAddUser, toggleShowAddClient] = useState(false);
-  const [users, GetId] = useState(4);
+  //const [users, GetId] = useState(4);
   const [formTitles, setAddClientTitles] = useState<TitleInterface[] | []>([]);
   const [sortColumn, setSortColumn] = useState<string>('Description');
   const [sortOrder, setSortOrder] = useState<string>('Asc');
@@ -35,39 +36,42 @@ export const UserRegPage: FunctionComponent = (): ReactElement => {
     //   GetId(await services.deleteUser(id));
     // }
   }
-  // const getid = async () => {
-  //   GetId(await services.deleteUser(id));
-  // }
-  // useEffect(() => {
-  //   getid();
-  // }, [users])
 
-  const getUser = async () => {
-    setUser((await services.getUser()).data);
-  }
-  console.log(getUser);
-  useEffect(() => {
-    getUser();
-  }, [user])
-  console.log(user);
+  const getUserById: (e: MouseEvent<HTMLButtonElement>) => Promise<void> = async (e) => {
+    // TODO: create service for getUsrById
 
-  // const deleteDocument: (e: MouseEvent<HTMLButtonElement>) => Promise<void> = async (e) => {
-  //   if (window.confirm('Are you sure you wish to delete this document?')) {
-  //     const id = Number(e.currentTarget.getAttribute('data-value'));
-  //     console.log(id);
-  //     await services.deleteUser(id);
-  //     //loadDocumentGrid(id);
-  //   }
-  // };
-
-
-  const handleRemoveClient: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void> = async () => {
-    const clientId = Number(activeClient.id);
-    await services.deleteUser(clientId);
-
-    console.log(clientId);
-
+    const id = Number(e.currentTarget.getAttribute('data-value'));
+    console.log(id);
+    // const user = await services.getUserById(id);
+    // setSelectedUser(user);
   };
+
+
+  const getAllUser = async () => {
+    setUsers((await services.getUser()).data);
+  }
+
+  useEffect(() => {
+    getAllUser();
+  }, [users])
+
+  const handleRemoveUser: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void> = async (e) => {
+    const id = Number(e.currentTarget.getAttribute('data-value'));
+    console.log(id);
+    await services.deleteUser(id);
+  };
+
+  const userTemp: UserInterface[] = [
+    {
+      id: 1,
+      name: 'nirmal',
+      areaName: 'none',
+      city: 'vad',
+      contactNo: '1221212112',
+      emailId: 'n@n.com',
+      pincode: '213123',
+      state: 'GJ'
+    }];
 
   return (
     <>
@@ -81,14 +85,14 @@ export const UserRegPage: FunctionComponent = (): ReactElement => {
       <PageHeading headingLevel={2} title="User" />
       <Container fullWidth>
         <UserTable
-          UserList={user}
+          UserList={userTemp}
           handleKey={handleKey}
           handleClick={handleClick}
           formTitles={formTitles}
+          editUser={getUserById}
           // deleteDocument={deleteDocument}
-          selectFunction={handleRemoveClient}
+          deleteUser={handleRemoveUser}
           selectEnabled={true}
-
         />
       </Container>
     </>

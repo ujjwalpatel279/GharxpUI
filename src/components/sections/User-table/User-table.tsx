@@ -11,7 +11,8 @@ import './User-table.scss';
 
 interface UserTableInterface {
   // deleteDocument: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
-  selectFunction: (e: MouseEvent<HTMLButtonElement>) => void;
+  deleteUser: (e: MouseEvent<HTMLButtonElement>) => void;
+  editUser: (e: MouseEvent<HTMLButtonElement>) => void;
   selectEnabled: boolean;
   UserList: UserInterface[];
   formTitles: TitleInterface[];
@@ -25,7 +26,8 @@ interface UserTableInterface {
 
 export const UserTable: FunctionComponent<UserTableInterface> = ({
   //  deleteDocument,
-  selectFunction,
+  deleteUser,
+  editUser,
   selectEnabled,
   UserList,
   formTitles,
@@ -48,24 +50,6 @@ export const UserTable: FunctionComponent<UserTableInterface> = ({
   // const [pageCount, setPageCount] = useState(1);
 
   const Columns: GridColumn[] = [
-    {
-      id: 'id', description: 'Id', sort: false,
-      render(column: GridColumn, row: GridRow) {
-        return (
-          <Button
-            type="button"
-            variant="secondary"
-            icon="plus"
-            textHidden
-            size="small"
-            disabled={!selectEnabled}
-            onClick={selectFunction}
-            dataValue={row.id}
-          >
-            Select
-          </Button>);
-      },
-    },
     { id: 'name', description: 'name', },
     { id: 'contactNo', description: 'contactNo' },
     { id: 'areaName', description: 'AreaName' },
@@ -73,7 +57,43 @@ export const UserTable: FunctionComponent<UserTableInterface> = ({
     { id: 'emailId', description: 'EmailId' },
     { id: 'city', description: 'City' },
     { id: 'state', description: 'State' },
-
+    {
+      id: 'edit', description: 'Edit',
+      render(column: GridColumn, row: GridRow) {
+        return (
+          <Button
+            type="button"
+            variant="secondary"
+            icon="upload"
+            textHidden
+            size="small"
+            disabled={!selectEnabled}
+            onClick={editUser}
+            dataValue={row.id}
+          >
+            Delete
+          </Button>);
+      },
+    },
+    {
+      id: 'delete',
+      description: 'Delete',
+      render(column: GridColumn, row: GridRow) {
+        return (
+          <Button
+            type="button"
+            variant="secondary"
+            icon="cog"
+            textHidden
+            size="small"
+            disabled={!selectEnabled}
+            onClick={deleteUser}
+            dataValue={row.id}
+          >
+            Delete
+          </Button>);
+      },
+    },
   ];
 
   useEffect(() => {
@@ -99,10 +119,6 @@ export const UserTable: FunctionComponent<UserTableInterface> = ({
             >
               {showAddClient ? 'Close' : 'New User'}
             </Button>
-
-            <Button type="submit" variant="primary" childClasses="u-mr-2">
-              delete User
-        </Button>
           </div>
         </div>
       }
